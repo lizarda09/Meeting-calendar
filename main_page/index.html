@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
         <div class="pb-2 mt-4 mb-2 border-bottom">
-            <h1>Calendar</h1>
+            <h1>Calendar <i class="fa fa-calendar" aria-hidden="true"></i></h1>
         </div>
         <div class="form-group d-flex justify-content-end">
             <select class="form-control col-md-2 m-2" id="menu-team">
                 <option>All members</option>
             </select>
-            <button type="button" onclick="window.location.href='../create_page/create_event.html'" class="btn btn-primary">New event</button>
+            <button type="button" onclick="window.location.href='../create_page/create_event.html'" class="btn btn-primary">New event <i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
         <table class="table table-striped table-bordered table-hover">
             <thead>
@@ -103,7 +104,6 @@
             </tbody>
         </table>
     </div>
-
     <script src="js/main.js" type="module"></script>
 </body>
 </html>

@@ -1,10 +1,15 @@
-import {spanTeg} from './constants.js'
+import {spanTag, tdTag} from './constants.js'
 
 function drawEvent(obj){
-    const span = document.createElement('span');
+    const span = document.createElement('span');;
     span.innerText = obj.name;
     const tabelItem = document.querySelector(`[class="${obj.day} ${obj.time}"]`);
     tabelItem.appendChild(span);
+    const icon = document.createElement('i');
+    icon.setAttribute('class', 'fa fa-times');
+    icon.setAttribute('aria-hidden', 'true');
+    icon.setAttribute('item-id', obj.id)
+    tabelItem.appendChild(icon);
 }
 
 export function getEventList(){
@@ -30,8 +35,14 @@ export function sortEvent(){
 }
 
 export function clearCalendar(){
-    console.log(spanTeg)
+    /*console.log(spanTeg)
     for(let key = 0; key < spanTeg.length; key++){
         spanTeg[key].innerText = '';
+    } */
+    for(let i=0; i<tdTag.length; i++){
+        while (tdTag[i].firstChild){
+            tdTag[i].removeChild(tdTag[i].firstChild);
+        }
     }
 }
+

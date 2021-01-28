@@ -1,5 +1,5 @@
 import {getEventList, sortEvent} from "./functions.js";
-import {team, sort} from "./constants.js";
+import {team, sort, tdTag} from "./constants.js";
 
 for(let value of team){
     const option = document.createElement('option');
@@ -9,7 +9,6 @@ for(let value of team){
 }
 
 sort.addEventListener('change', sortEvent);
-
 
 getEventList();
 

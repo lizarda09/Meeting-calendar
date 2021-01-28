@@ -8,5 +8,7 @@ export const nameEvent = document.getElementById('nameEvent');
 
 export const team = ["Liza", "Masha", "Dima", "Vlad", "Kate", "Vova"];
 
-export const spanTeg = document.getElementsByTagName('span');
+export const spanTag = document.getElementsByTagName('span');
+
+export const tdTag = document.getElementsByTagName('td');
 
