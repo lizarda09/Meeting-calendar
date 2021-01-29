@@ -12,3 +12,7 @@ export const spanTag = document.getElementsByTagName('span');
 
 export const tdTag = document.getElementsByTagName('td');
 
+export const iconDel = document.getElementsByTagName('i');
+
+export const remove = document.querySelectorAll('.fa .fa-times');
+

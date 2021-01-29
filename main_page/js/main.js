@@ -1,5 +1,5 @@
 import {getEventList, sortEvent} from "./functions.js";
-import {team, sort, tdTag} from "./constants.js";
+import {team, sort, tdTag, iconDel, remove} from "./constants.js";
 
 for(let value of team){
     const option = document.createElement('option');
@@ -9,6 +9,12 @@ for(let value of team){
 }
 
 sort.addEventListener('change', sortEvent);
+
+
+for(let i=0; i<remove.length; i++){
+   console.log(remove[i])
+}
+
 
 getEventList();
 

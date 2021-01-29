@@ -10,6 +10,19 @@ function drawEvent(obj){
     icon.setAttribute('aria-hidden', 'true');
     icon.setAttribute('item-id', obj.id)
     tabelItem.appendChild(icon);
+    icon.addEventListener('click', addListener);
+}
+
+function addListener(){
+    const id = this.getAttribute('item-id');
+    const isSure = confirm('Are you sure?');
+    if(isSure){
+        localStorage.removeItem(id);
+        clearCalendar();
+        getEventList();
+    }
+    else return;
+
 }
 
 export function getEventList(){
