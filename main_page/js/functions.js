@@ -40,8 +40,10 @@ export function sortEvent(){
     for(let key in localStorage) {
         if(localStorage.hasOwnProperty(key)){
             const item = JSON.parse(localStorage[key]);
-            if(this.value === item.team){
-               item && drawEvent(item);
+            for(let i = 0; i<item.team.length; i++){
+                if(this.value === item.team[i]){
+                    item && drawEvent(item);
+                }
             }
         }
     }
