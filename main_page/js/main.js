@@ -7,14 +7,11 @@ for(let value of team){
     const sort = document.getElementById('menu-team');
     sort.appendChild(option);
 }
-
 sort.addEventListener('change', sortEvent);
-
 
 for(let i=0; i<remove.length; i++){
    console.log(remove[i])
 }
-
 
 getEventList();
 

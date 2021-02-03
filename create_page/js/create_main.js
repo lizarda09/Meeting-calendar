@@ -1,4 +1,4 @@
-import {btn_create, day, dayEvent, team, teamEvent, time, timeEvent} from "./create_constants.js";
+import {btn_create, day, dayEvent, team, teamInput, time, timeEvent} from "./create_constants.js";
 import {createNewEvent} from "./create_functions.js";
 
 for(let value of day){
@@ -10,7 +10,7 @@ for(let value of day){
 for(let value of team){
     const option = document.createElement('option');
     option.innerText = value;
-    teamEvent.appendChild(option);
+    teamInput.appendChild(option);
 }
 
 for(let value of time){
@@ -20,3 +20,4 @@ for(let value of time){
 }
 
 btn_create.addEventListener('click', createNewEvent);
+

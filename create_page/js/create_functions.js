@@ -1,7 +1,14 @@
-import {dayEvent, nameEvent, teamEvent, timeEvent} from "./create_constants.js";
+import {dayEvent, nameEvent, teamInput, timeEvent} from "./create_constants.js";
 
 export function createNewEvent(e){
     e.preventDefault();
+
+    console.log($('#team').val());
+
+    if(nameEvent.value === "") {
+        alert('You cannot create the event without name!');
+        return;
+    }
 
     for(let key in localStorage) {
         if(localStorage.hasOwnProperty(key)){
@@ -15,12 +22,12 @@ export function createNewEvent(e){
     const event = {
         id: new Date().getTime(),
         name: nameEvent.value,
-        team: teamEvent.value,
+        team: $('#team').val(),
         day: dayEvent.value,
         time: timeEvent.value
     };
+    console.log(event);
     localStorage.setItem(event.id, JSON.stringify(event));
     window.location.href = "../main_page/index.html";
-
 
 }
