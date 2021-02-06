@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="../node_modules/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
     <link rel="stylesheet" href="../node_modules/bootstrap-multiselect/dist/css/bootstrap-multiselect.css">
     <script type="text/javascript">
@@ -15,27 +15,27 @@
     </script>
 </head>
 <body>
-    <div class="container">
-        <form class="mt-5">
-            <div class="form-group row">
-                <label for="nameEvent" class="col-sm-2 col-form-label">Name of the event</label>
-                <div class="col-sm-10">
+    <div class="container mt-4">
+        <form class="shadow w-50 m-auto p-4">
+            <div class="d-flex m-2">
+                <label for="nameEvent" class="mr-3">Name of the event</label>
+                <div class="">
                     <input type="text" class="form-control" id="nameEvent">
                 </div>
             </div>
-            <div class="form-group row">
-                <label for="team" class="col-sm-2 col-form-label">Participants</label>
+            <div class="d-flex m-2">
+                <label for="team" class="mr-3">Participants</label>
                 <select id="team" multiple="multiple"></select>
             </div>
-            <div class="form-group row">
-                <label for="day" class="col-sm-2 col-form-label">Day</label>
-                <select id="day" class="form-control col-sm-10"></select>
+            <div class="d-flex m-2">
+                <label for="day" class="mr-3">Day</label>
+                <select id="day" class=""></select>
             </div>
-            <div class="form-group row">
-                <label for="time" class="col-sm-2 col-form-label">Time</label>
-                <select id="time" class="form-control col-sm-10"></select>
+            <div class="d-flex m-2">
+                <label for="time" class="mr-3">Time</label>
+                <select id="time" class=""></select>
             </div>
-            <div class="d-flex justify-content-end">
+            <div >
                 <button type="button" id="btn-create" class="btn btn-info mr-3">Create</button>
                 <button type="button" onclick="window.location.href='../main_page/index.html'" class="btn btn-secondary">Cancel</button>
             </div>

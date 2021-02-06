@@ -1,17 +1,19 @@
-import {spanTag, tdTag} from './constants.js'
+import {tdTag} from './constants.js'
 
 function drawEvent(obj){
     const span = document.createElement('span');;
     span.innerText = obj.name;
-    const tabelItem = document.querySelector(`[class="${obj.day} ${obj.time}"]`);
-    tabelItem.appendChild(span);
+    span.setAttribute('span-id', obj.id);
+    const tableItem = document.querySelector(`[class="${obj.day} ${obj.time}"]`);
+    tableItem.appendChild(span);
     const icon = document.createElement('i');
     icon.setAttribute('class', 'fa fa-times');
     icon.setAttribute('aria-hidden', 'true');
     icon.setAttribute('item-id', obj.id)
-    tabelItem.appendChild(icon);
+    tableItem.appendChild(icon);
     icon.addEventListener('click', addListener);
 }
+
 
 function addListener(){
     const id = this.getAttribute('item-id');
