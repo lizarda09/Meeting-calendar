@@ -52,10 +52,6 @@ export function sortEvent(){
 }
 
 export function clearCalendar(){
-    /*console.log(spanTeg)
-    for(let key = 0; key < spanTeg.length; key++){
-        spanTeg[key].innerText = '';
-    } */
     for(let i=0; i<tdTag.length; i++){
         while (tdTag[i].firstChild){
             tdTag[i].removeChild(tdTag[i].firstChild);
